@@ -33,18 +33,23 @@ namespace proVentas.Vista
 
         private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRoles r = new frmRoles();
-            r.Show();
+            //frmRoles r = new frmRoles();
+            //r.Show();
 
-            //AbrirFormulario(new frmRoles());
+            AbrirFormulario(new frmRoles());
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUsuarios usu = new frmUsuarios();
-            usu.Show();
+            //frmUsuarios usu = new frmUsuarios();
+            //usu.Show();
 
-            //AbrirFormulario(new frmUsuarios());
+            AbrirFormulario(new frmUsuarios());
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

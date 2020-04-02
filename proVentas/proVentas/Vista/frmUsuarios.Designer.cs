@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dtvUsuarios = new System.Windows.Forms.DataGridView();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contrasenia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCargar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -38,9 +41,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contrasenia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,16 +57,34 @@
             this.dtvUsuarios.Location = new System.Drawing.Point(12, 155);
             this.dtvUsuarios.Name = "dtvUsuarios";
             this.dtvUsuarios.ReadOnly = true;
-            this.dtvUsuarios.Size = new System.Drawing.Size(544, 236);
+            this.dtvUsuarios.Size = new System.Drawing.Size(606, 236);
             this.dtvUsuarios.TabIndex = 0;
             this.dtvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvUsuarios_CellClick);
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Id";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Contrasenia
+            // 
+            this.Contrasenia.HeaderText = "Email";
+            this.Contrasenia.Name = "Contrasenia";
+            this.Contrasenia.ReadOnly = true;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Contrasenia";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // btnCargar
             // 
             this.btnCargar.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(335, 35);
+            this.btnCargar.Location = new System.Drawing.Point(328, 24);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(102, 42);
+            this.btnCargar.Size = new System.Drawing.Size(142, 57);
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -111,9 +129,9 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(443, 35);
+            this.btnGuardar.Location = new System.Drawing.Point(476, 24);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(102, 42);
+            this.btnGuardar.Size = new System.Drawing.Size(142, 57);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -122,9 +140,9 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(335, 87);
+            this.btnEditar.Location = new System.Drawing.Point(328, 87);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(102, 42);
+            this.btnEditar.Size = new System.Drawing.Size(142, 57);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -133,9 +151,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(443, 87);
+            this.btnEliminar.Location = new System.Drawing.Point(476, 87);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(102, 42);
+            this.btnEliminar.Size = new System.Drawing.Size(142, 57);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -144,7 +162,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(443, 406);
+            this.btnSalir.Location = new System.Drawing.Point(506, 402);
             this.btnSalir.MaximumSize = new System.Drawing.Size(112, 42);
             this.btnSalir.MinimumSize = new System.Drawing.Size(112, 42);
             this.btnSalir.Name = "btnSalir";
@@ -154,30 +172,12 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Email
-            // 
-            this.Email.HeaderText = "Id";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Contrasenia
-            // 
-            this.Contrasenia.HeaderText = "Email";
-            this.Contrasenia.Name = "Contrasenia";
-            this.Contrasenia.ReadOnly = true;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Contrasenia";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
             // frmUsuarios
             // 
             this.AcceptButton = this.btnSalir;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 460);
+            this.ClientSize = new System.Drawing.Size(630, 456);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -188,6 +188,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dtvUsuarios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
