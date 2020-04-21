@@ -12,21 +12,17 @@ namespace proVentas.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class usuarios
+    public partial class tb_documento
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public usuarios()
+        public tb_documento()
         {
-            this.roles_usuarios = new HashSet<roles_usuarios>();
             this.tb_venta = new HashSet<tb_venta>();
         }
     
-        public int id { get; set; }
-        public string email { get; set; }
-        public string contrasenia { get; set; }
+        public int iDDocumento { get; set; }
+        public string nombreDocumento { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<roles_usuarios> roles_usuarios { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_venta> tb_venta { get; set; }
     }

@@ -8,6 +8,17 @@
         <EntityTypeShape EntityType="sistemaVentasModel.usuarios" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="sistemaVentasModel.roles_usuarios" Width="1.5" PointX="5" PointY="0.75" />
         <AssociationConnector Association="sistemaVentasModel.FK__roles_usu__idUsu__398D8EEE" />
+        <EntityTypeShape EntityType="sistemaVentasModel.detalleVenta" Width="1.5" PointX="5.25" PointY="3.5" />
+        <EntityTypeShape EntityType="sistemaVentasModel.producto" Width="1.5" PointX="3" PointY="7.75" />
+        <EntityTypeShape EntityType="sistemaVentasModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="sistemaVentasModel.tb_cliente" Width="1.5" PointX="0.75" PointY="5.875" />
+        <EntityTypeShape EntityType="sistemaVentasModel.tb_documento" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="sistemaVentasModel.tb_venta" Width="1.5" PointX="3" PointY="3.25" />
+        <AssociationConnector Association="sistemaVentasModel.FK__detalleVe__idPro__5812160E" />
+        <AssociationConnector Association="sistemaVentasModel.FK__detalleVe__idVen__571DF1D5" />
+        <AssociationConnector Association="sistemaVentasModel.FK__tb_venta__iDClie__5165187F" />
+        <AssociationConnector Association="sistemaVentasModel.FK__tb_venta__idDocu__5070F446" />
+        <AssociationConnector Association="sistemaVentasModel.FK__tb_venta__iDUsua__52593CB8" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

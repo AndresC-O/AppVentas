@@ -120,5 +120,10 @@ namespace proVentas.Vista
         {
             Environment.Exit(0);
         }
+
+        private void dtvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
