@@ -37,7 +37,7 @@
             // 
             this.dtVistaRoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtVistaRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtVistaRoles.Location = new System.Drawing.Point(12, 111);
+            this.dtVistaRoles.Location = new System.Drawing.Point(76, 119);
             this.dtVistaRoles.Name = "dtVistaRoles";
             this.dtVistaRoles.Size = new System.Drawing.Size(606, 284);
             this.dtVistaRoles.TabIndex = 0;
@@ -45,10 +45,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 41);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(555, 20);
+            this.label1.Size = new System.Drawing.Size(686, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "AREA PARA VISUALIZAR LOS ROLES DE USUARIOS ACTUALES";
             // 
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 456);
+            this.ClientSize = new System.Drawing.Size(767, 495);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtVistaRoles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
