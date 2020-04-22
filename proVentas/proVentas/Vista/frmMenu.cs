@@ -17,39 +17,50 @@ namespace proVentas.Vista
             InitializeComponent();
         }
 
-        private void AbrirFormulario(object formHijo)
-        {
-            if(this.panelContenedor.Controls.Count > 0)
-            {
-                this.panelContenedor.Controls.RemoveAt(0);
-                Form fh = formHijo as Form;
-                fh.TopLevel = false;
-                fh.Dock = DockStyle.Fill;
-                this.panelContenedor.Controls.Add(fh);
-                this.panelContenedor.Tag = fh;
-                fh.Show();
-            }
-        }
+        //private void AbrirFormulario(object formHijo)
+        //{
+        //    if(this.panelContenedor.Controls.Count > 0)
+        //    {
+        //        this.panelContenedor.Controls.RemoveAt(0);
+        //        Form fh = formHijo as Form;
+        //        fh.TopLevel = false;
+        //        fh.Dock = DockStyle.Fill;
+        //        this.panelContenedor.Controls.Add(fh);
+        //        this.panelContenedor.Tag = fh;
+        //        fh.Show();
+        //    }
+        //}
 
         private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmRoles r = new frmRoles();
-            //r.Show();
+            frmRoles r = new frmRoles();
+            r.MdiParent = this;
+            r.Show();
 
-            AbrirFormulario(new frmRoles());
+            //AbrirFormulario(new frmRoles());
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmUsuarios usu = new frmUsuarios();
-            //usu.Show();
+            frmUsuarios usu = new frmUsuarios();
+            usu.MdiParent = this;
+            usu.Show();
 
-            AbrirFormulario(new frmUsuarios());
+            //AbrirFormulario(new frmUsuarios());
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        public static FrmVentas ventas = new FrmVentas();
+
+        private void controlVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {        
+            ventas.MdiParent = this;
+            ventas.Show();
+            //AbrirFormulario(new FrmVentas());
         }
     }
 }
