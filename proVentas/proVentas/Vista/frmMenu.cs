@@ -69,5 +69,12 @@ namespace proVentas.Vista
             clientes.MdiParent = this;
             clientes.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProductos prod = new FrmProductos();
+            prod.MdiParent = this;
+            prod.Show();
+        }
     }
 }

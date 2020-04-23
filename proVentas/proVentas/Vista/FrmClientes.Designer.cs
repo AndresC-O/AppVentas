@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblContrasenia = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDui = new System.Windows.Forms.Label();
             this.txtDui = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -45,25 +45,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtvClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblContrasenia
+            // lblDireccion
             // 
-            this.lblContrasenia.AutoSize = true;
-            this.lblContrasenia.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasenia.Location = new System.Drawing.Point(8, 87);
-            this.lblContrasenia.Name = "lblContrasenia";
-            this.lblContrasenia.Size = new System.Drawing.Size(107, 24);
-            this.lblContrasenia.TabIndex = 9;
-            this.lblContrasenia.Text = "Direccion";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(8, 87);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(107, 24);
+            this.lblDireccion.TabIndex = 9;
+            this.lblDireccion.Text = "Direccion";
             // 
-            // lblUsuario
+            // lblCliente
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(8, 7);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(174, 24);
-            this.lblUsuario.TabIndex = 7;
-            this.lblUsuario.Text = "Nombre Cliente";
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(8, 7);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(174, 24);
+            this.lblCliente.TabIndex = 7;
+            this.lblCliente.Text = "Nombre Cliente";
             // 
             // txtCliente
             // 
@@ -73,15 +73,15 @@
             this.txtCliente.Size = new System.Drawing.Size(308, 31);
             this.txtCliente.TabIndex = 6;
             // 
-            // label1
+            // lblDui
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 24);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "DUI";
+            this.lblDui.AutoSize = true;
+            this.lblDui.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDui.Location = new System.Drawing.Point(8, 158);
+            this.lblDui.Name = "lblDui";
+            this.lblDui.Size = new System.Drawing.Size(44, 24);
+            this.lblDui.TabIndex = 11;
+            this.lblDui.Text = "DUI";
             // 
             // txtDui
             // 
@@ -183,11 +183,11 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDui);
             this.Controls.Add(this.txtDui);
-            this.Controls.Add(this.lblContrasenia);
+            this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.txtCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmClientes";
@@ -202,10 +202,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblContrasenia;
-        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDui;
         private System.Windows.Forms.TextBox txtDui;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
