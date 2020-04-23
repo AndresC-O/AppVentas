@@ -62,5 +62,12 @@ namespace proVentas.Vista
             ventas.Show();
             //AbrirFormulario(new FrmVentas());
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes clientes = new FrmClientes();
+            clientes.MdiParent = this;
+            clientes.Show();
+        }
     }
 }

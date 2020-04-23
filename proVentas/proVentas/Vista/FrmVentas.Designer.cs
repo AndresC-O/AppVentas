@@ -270,6 +270,7 @@
             this.dtvProductos.Name = "dtvProductos";
             this.dtvProductos.ReadOnly = true;
             this.dtvProductos.RowHeadersVisible = false;
+            this.dtvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvProductos.Size = new System.Drawing.Size(734, 150);
             this.dtvProductos.TabIndex = 20;
             // 

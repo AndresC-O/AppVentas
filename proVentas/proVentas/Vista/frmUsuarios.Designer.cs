@@ -126,9 +126,9 @@
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(19, 16);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(81, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(71, 24);
             this.lblUsuario.TabIndex = 3;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "E-mail";
             // 
             // lblContrasenia
             // 

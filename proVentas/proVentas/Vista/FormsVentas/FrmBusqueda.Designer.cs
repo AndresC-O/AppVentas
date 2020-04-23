@@ -40,6 +40,7 @@
             this.dtvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvProductos.Location = new System.Drawing.Point(12, 73);
             this.dtvProductos.Name = "dtvProductos";
+            this.dtvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvProductos.Size = new System.Drawing.Size(581, 222);
             this.dtvProductos.TabIndex = 0;
             this.dtvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvProductos_CellDoubleClick);
