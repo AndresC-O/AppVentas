@@ -34,6 +34,7 @@
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mASOPCIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +60,8 @@
             this.usuariosToolStripMenuItem,
             this.rolesToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.productosToolStripMenuItem});
+            this.productosToolStripMenuItem,
+            this.documentosToolStripMenuItem});
             this.cONTROLToolStripMenuItem.Name = "cONTROLToolStripMenuItem";
             this.cONTROLToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.cONTROLToolStripMenuItem.Text = "CONTROL";
@@ -67,30 +69,37 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // rolesToolStripMenuItem
             // 
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // documentosToolStripMenuItem
+            // 
+            this.documentosToolStripMenuItem.Name = "documentosToolStripMenuItem";
+            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.documentosToolStripMenuItem.Text = "Documentos";
+            this.documentosToolStripMenuItem.Click += new System.EventHandler(this.documentosToolStripMenuItem_Click);
             // 
             // vENTASToolStripMenuItem
             // 
@@ -103,7 +112,7 @@
             // controlVentasToolStripMenuItem
             // 
             this.controlVentasToolStripMenuItem.Name = "controlVentasToolStripMenuItem";
-            this.controlVentasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.controlVentasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.controlVentasToolStripMenuItem.Text = "Control Ventas";
             this.controlVentasToolStripMenuItem.Click += new System.EventHandler(this.controlVentasToolStripMenuItem_Click);
             // 
@@ -154,5 +163,6 @@
         private System.Windows.Forms.ToolStripMenuItem controlVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem documentosToolStripMenuItem;
     }
 }

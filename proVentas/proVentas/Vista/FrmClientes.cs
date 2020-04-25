@@ -45,6 +45,10 @@ namespace proVentas.Vista
         {
             CargarDatos();
             LimpiarDatos();
+
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -73,6 +77,11 @@ namespace proVentas.Vista
             txtCliente.Text = nombreCliente;
             txtDireccion.Text = direccion;
             txtDui.Text = dui;
+
+
+            btnGuardar.Enabled = false;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -111,6 +120,16 @@ namespace proVentas.Vista
             dtvClientes.Rows.Clear();
             CargarDatos();
             LimpiarDatos();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            txtCliente.Text = "";
+            txtDireccion.Text = "";
+            txtDui.Text = "";
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = true;
         }
     }
 }

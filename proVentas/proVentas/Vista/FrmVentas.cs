@@ -64,9 +64,12 @@ namespace proVentas.Vista
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             dtvProductos.Rows.Add(txtCodProd.Text, txtNombrePrd.Text, txtPrecioProd.Text, txtCantidad.Text, txtTotal.Text);
+
+
             try
             {
                 Calculo();
+
             }
             catch(Exception ex)
             {

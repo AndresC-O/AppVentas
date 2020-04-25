@@ -44,6 +44,10 @@ namespace proVentas.Vista
         private void FrmProductos_Load(object sender, EventArgs e)
         {
             CargarDatos();
+
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -72,6 +76,10 @@ namespace proVentas.Vista
             txtProducto.Text = nombreProd;
             txtPrecio.Text = precio;
             txtEstado.Text = estado;
+
+            btnGuardar.Enabled = false;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -110,6 +118,16 @@ namespace proVentas.Vista
             dtvProductos.Rows.Clear();
             CargarDatos();
             LimpiarDatos();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            txtProducto.Text = "";
+            txtPrecio.Text = "";
+            txtEstado.Text = "";
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = true;
         }
     }
 }

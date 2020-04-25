@@ -88,6 +88,9 @@ namespace proVentas.Vista
             txtUsuario.Text = email;
             txtContrasenia.Text = contra;
 
+            btnGuardar.Enabled = false;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -114,6 +117,10 @@ namespace proVentas.Vista
         private void Usuarios_Load(object sender, EventArgs e)
         {
             CargarDatos();
+
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -124,6 +131,16 @@ namespace proVentas.Vista
         private void dtvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "";
+            txtContrasenia.Text = "";
+
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = true;
         }
     }
 }

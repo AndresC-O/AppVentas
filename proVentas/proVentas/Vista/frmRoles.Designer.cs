@@ -31,10 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtVistaRoles = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.idRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtVistaRoles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             this.rol});
             this.dtVistaRoles.EnableHeadersVisualStyles = false;
             this.dtVistaRoles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(97)))), ((int)(((byte)(119)))));
-            this.dtVistaRoles.Location = new System.Drawing.Point(76, 119);
+            this.dtVistaRoles.Location = new System.Drawing.Point(83, 119);
             this.dtVistaRoles.Name = "dtVistaRoles";
             this.dtVistaRoles.ReadOnly = true;
             this.dtVistaRoles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -74,23 +74,13 @@
             this.dtVistaRoles.Size = new System.Drawing.Size(606, 284);
             this.dtVistaRoles.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(686, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "AREA PARA VISUALIZAR LOS ROLES DE USUARIOS ACTUALES";
-            // 
             // idRol
             // 
             this.idRol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.idRol.HeaderText = "ID";
             this.idRol.Name = "idRol";
             this.idRol.ReadOnly = true;
-            this.idRol.Width = 53;
+            this.idRol.Width = 52;
             // 
             // email
             // 
@@ -103,6 +93,16 @@
             this.rol.HeaderText = "ROL";
             this.rol.Name = "rol";
             this.rol.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(686, 28);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "AREA PARA VISUALIZAR LOS ROLES DE USUARIOS ACTUALES";
             // 
             // frmRoles
             // 

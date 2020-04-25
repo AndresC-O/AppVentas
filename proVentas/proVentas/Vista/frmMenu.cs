@@ -76,5 +76,12 @@ namespace proVentas.Vista
             prod.MdiParent = this;
             prod.Show();
         }
+
+        private void documentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDocumentos doc = new FrmDocumentos();
+            doc.MdiParent = this;
+            doc.Show();
+        }
     }
 }

@@ -39,6 +39,10 @@ namespace proVentas.Vista.FormsVentas
                                     Precio = tbProd.precioProducto
                                 };
 
+                //foreach(var iterar in BuscarPrd)
+                //{
+                //    dtvProductos.Rows.Add(iterar.Id, iterar.Nombre, iterar.Precio);
+                //}
                 dtvProductos.DataSource = BuscarPrd.ToList();
             }
         }
