@@ -191,6 +191,7 @@
             this.Controls.Add(this.txtProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProductos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).EndInit();

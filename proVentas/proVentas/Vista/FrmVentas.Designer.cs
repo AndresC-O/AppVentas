@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumVenta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,15 +51,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dtvProductos = new System.Windows.Forms.DataGridView();
+            this.txtTotalGeneral = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.CodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTotalGeneral = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +140,9 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBuscar.Location = new System.Drawing.Point(557, 92);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(141, 33);
@@ -246,9 +250,9 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(630, 231);
+            this.btnAgregar.Location = new System.Drawing.Point(527, 229);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(99, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(202, 36);
             this.btnAgregar.TabIndex = 19;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -259,59 +263,49 @@
             this.dtvProductos.AllowUserToAddRows = false;
             this.dtvProductos.AllowUserToDeleteRows = false;
             this.dtvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
+            this.dtvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtvProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(97)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtvProductos.ColumnHeadersHeight = 27;
             this.dtvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodProd,
             this.NombreProd,
             this.Precio,
             this.Cantidad,
             this.total});
+            this.dtvProductos.EnableHeadersVisualStyles = false;
+            this.dtvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(97)))), ((int)(((byte)(119)))));
             this.dtvProductos.Location = new System.Drawing.Point(8, 273);
             this.dtvProductos.Name = "dtvProductos";
             this.dtvProductos.ReadOnly = true;
+            this.dtvProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dtvProductos.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(131)))), ((int)(((byte)(167)))));
+            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvProductos.Size = new System.Drawing.Size(734, 150);
             this.dtvProductos.TabIndex = 20;
             // 
-            // CodProd
-            // 
-            this.CodProd.HeaderText = "CODIGO";
-            this.CodProd.Name = "CodProd";
-            this.CodProd.ReadOnly = true;
-            // 
-            // NombreProd
-            // 
-            this.NombreProd.HeaderText = "NOMBRE PRODUCTO";
-            this.NombreProd.Name = "NombreProd";
-            this.NombreProd.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "PRECIO";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "CANTIDAD";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "TOTAL";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            // 
             // txtTotalGeneral
             // 
+            this.txtTotalGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
             this.txtTotalGeneral.Enabled = false;
             this.txtTotalGeneral.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalGeneral.Location = new System.Drawing.Point(623, 446);
             this.txtTotalGeneral.Name = "txtTotalGeneral";
             this.txtTotalGeneral.Size = new System.Drawing.Size(115, 37);
             this.txtTotalGeneral.TabIndex = 22;
+            this.txtTotalGeneral.Text = "0.00";
             // 
             // label10
             // 
@@ -339,10 +333,45 @@
             this.panel2.Size = new System.Drawing.Size(725, 3);
             this.panel2.TabIndex = 24;
             // 
+            // CodProd
+            // 
+            this.CodProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.CodProd.HeaderText = "CODIGO";
+            this.CodProd.Name = "CodProd";
+            this.CodProd.ReadOnly = true;
+            this.CodProd.Width = 89;
+            // 
+            // NombreProd
+            // 
+            this.NombreProd.HeaderText = "NOMBRE PRODUCTO";
+            this.NombreProd.Name = "NombreProd";
+            this.NombreProd.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "PRECIO";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Cantidad.HeaderText = "CANTIDAD";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 99;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "TOTAL";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
             this.ClientSize = new System.Drawing.Size(767, 495);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -403,14 +432,14 @@
         public System.Windows.Forms.TextBox txtPrecioProd;
         public System.Windows.Forms.TextBox txtCantidad;
         public System.Windows.Forms.TextBox txtTotal;
+        public System.Windows.Forms.TextBox txtTotalGeneral;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        public System.Windows.Forms.TextBox txtTotalGeneral;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
     }
 }

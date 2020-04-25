@@ -28,17 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtVistaRoles = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.idRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtVistaRoles)).BeginInit();
             this.SuspendLayout();
             // 
             // dtVistaRoles
             // 
+            this.dtVistaRoles.AllowUserToAddRows = false;
+            this.dtVistaRoles.AllowUserToDeleteRows = false;
             this.dtVistaRoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtVistaRoles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
+            this.dtVistaRoles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtVistaRoles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(97)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtVistaRoles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtVistaRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtVistaRoles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idRol,
+            this.email,
+            this.rol});
+            this.dtVistaRoles.EnableHeadersVisualStyles = false;
+            this.dtVistaRoles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(97)))), ((int)(((byte)(119)))));
             this.dtVistaRoles.Location = new System.Drawing.Point(76, 119);
             this.dtVistaRoles.Name = "dtVistaRoles";
+            this.dtVistaRoles.ReadOnly = true;
+            this.dtVistaRoles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtVistaRoles.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(131)))), ((int)(((byte)(167)))));
+            this.dtVistaRoles.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtVistaRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtVistaRoles.Size = new System.Drawing.Size(606, 284);
             this.dtVistaRoles.TabIndex = 0;
             // 
@@ -52,10 +84,31 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "AREA PARA VISUALIZAR LOS ROLES DE USUARIOS ACTUALES";
             // 
+            // idRol
+            // 
+            this.idRol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idRol.HeaderText = "ID";
+            this.idRol.Name = "idRol";
+            this.idRol.ReadOnly = true;
+            this.idRol.Width = 53;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-MAIL";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // rol
+            // 
+            this.rol.HeaderText = "ROL";
+            this.rol.Name = "rol";
+            this.rol.ReadOnly = true;
+            // 
             // frmRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
             this.ClientSize = new System.Drawing.Size(767, 495);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtVistaRoles);
@@ -74,5 +127,8 @@
 
         private System.Windows.Forms.DataGridView dtVistaRoles;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idRol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rol;
     }
 }

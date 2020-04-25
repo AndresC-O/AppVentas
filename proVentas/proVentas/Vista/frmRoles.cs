@@ -33,7 +33,11 @@ namespace proVentas.Vista
                                      TipoRol = rolesUs.tipo_rol
                                  };
 
-                dtVistaRoles.DataSource = joinTablas.ToList();
+                //dtVistaRoles.DataSource = joinTablas.ToList();
+                foreach (var iterar in joinTablas)
+                {
+                    dtVistaRoles.Rows.Add(iterar.Id, iterar.Email, iterar.TipoRol);
+                }
             }
         }
     }
