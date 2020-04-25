@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -65,10 +66,10 @@ namespace proVentas.Vista
         {
             dtvProductos.Rows.Add(txtCodProd.Text, txtNombrePrd.Text, txtPrecioProd.Text, txtCantidad.Text, txtTotal.Text);
 
-
             try
             {
                 Calculo();
+                CalculoGeneral();
 
             }
             catch(Exception ex)
@@ -102,6 +103,19 @@ namespace proVentas.Vista
                 MessageBox.Show("No puedes ingresar cantidades menores a 0");
                 txtCantidad.Select();
             }
+        }
+
+        //Metodo que devuelve el Total General:
+        void CalculoGeneral()
+        {
+            Double total=0;
+
+            foreach(DataGridViewRow suma in dtvProductos.Rows)
+            {
+                total += Convert.ToDouble(suma.Cells["total"].Value);  
+            }
+
+            txtTotalGeneral.Text = Convert.ToString(total);
         }
     }
 }
