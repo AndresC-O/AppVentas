@@ -50,18 +50,26 @@ namespace proVentas.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using (sistemaVentasEntities db = new sistemaVentasEntities())
+            if(txtUsuario.Equals("") || txtContrasenia.Equals(""))
             {
-                user.email = txtUsuario.Text;
-                user.contrasenia = txtContrasenia.Text;
+                using (sistemaVentasEntities db = new sistemaVentasEntities())
+                {
+                    user.email = txtUsuario.Text;
+                    user.contrasenia = txtContrasenia.Text;
 
-                db.usuarios.Add(user);
-                db.SaveChanges();
+                    db.usuarios.Add(user);
+                    db.SaveChanges();
+                }
+
+                dtvUsuarios.Rows.Clear();
+                CargarDatos();
+                LimpiarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Introduzca Valores primero.");
             }
 
-            dtvUsuarios.Rows.Clear();
-            CargarDatos();
-            LimpiarDatos();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

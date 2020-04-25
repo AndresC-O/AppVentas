@@ -53,19 +53,27 @@ namespace proVentas.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using (sistemaVentasEntities db = new sistemaVentasEntities())
+            if (txtCliente.Equals("") || txtDireccion.Equals("") || txtDui.Equals(""))
             {
-                cliente.nombreCliente = txtCliente.Text;
-                cliente.direccionCliente = txtDireccion.Text;
-                cliente.duiCliente = txtDui.Text;
+                using (sistemaVentasEntities db = new sistemaVentasEntities())
+                {
+                    cliente.nombreCliente = txtCliente.Text;
+                    cliente.direccionCliente = txtDireccion.Text;
+                    cliente.duiCliente = txtDui.Text;
 
-                db.tb_cliente.Add(cliente);
-                db.SaveChanges();
+                    db.tb_cliente.Add(cliente);
+                    db.SaveChanges();
+                }
+
+                dtvClientes.Rows.Clear();
+                CargarDatos();
+                LimpiarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Introduzca Valores primero.");
             }
 
-            dtvClientes.Rows.Clear();
-            CargarDatos();
-            LimpiarDatos();
         }
 
         private void dtvClientes_CellClick(object sender, DataGridViewCellEventArgs e)

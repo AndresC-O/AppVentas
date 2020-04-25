@@ -52,19 +52,26 @@ namespace proVentas.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using (sistemaVentasEntities db = new sistemaVentasEntities())
+            if (txtProducto.Equals("") || txtPrecio.Equals("") || txtEstado.Equals(""))
             {
-                prod.nombreProducto = txtProducto.Text;
-                prod.precioProducto = txtPrecio.Text;
-                prod.estadoProducto = txtEstado.Text;
+                using (sistemaVentasEntities db = new sistemaVentasEntities())
+                {
+                    prod.nombreProducto = txtProducto.Text;
+                    prod.precioProducto = txtPrecio.Text;
+                    prod.estadoProducto = txtEstado.Text;
 
-                db.producto.Add(prod);
-                db.SaveChanges();
+                    db.producto.Add(prod);
+                    db.SaveChanges();
+                }
+
+                dtvProductos.Rows.Clear();
+                CargarDatos();
+                LimpiarDatos();
             }
-
-            dtvProductos.Rows.Clear();
-            CargarDatos();
-            LimpiarDatos();
+            else
+            {
+                MessageBox.Show("Introduzca Valores primero.");
+            }
         }
 
         private void dtvProductos_CellClick(object sender, DataGridViewCellEventArgs e)

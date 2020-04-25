@@ -57,7 +57,7 @@ namespace proVentas.Vista
         public static FrmVentas ventas = new FrmVentas();
 
         private void controlVentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {        
+        {
             ventas.MdiParent = this;
             ventas.Show();
             //AbrirFormulario(new FrmVentas());

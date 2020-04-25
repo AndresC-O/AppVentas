@@ -50,17 +50,24 @@ namespace proVentas.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using (sistemaVentasEntities db = new sistemaVentasEntities())
+            if (txtDocumento.Equals(""))
             {
-                document.nombreDocumento = txtDocumento.Text;
+                using (sistemaVentasEntities db = new sistemaVentasEntities())
+                {
+                    document.nombreDocumento = txtDocumento.Text;
 
-                db.tb_documento.Add(document);
-                db.SaveChanges();
+                    db.tb_documento.Add(document);
+                    db.SaveChanges();
+                }
+
+                dtvDocumentos.Rows.Clear();
+                CargarDatos();
+                LimpiarDatos();
             }
-
-            dtvDocumentos.Rows.Clear();
-            CargarDatos();
-            LimpiarDatos();
+            else
+            {
+                MessageBox.Show("Introduzca Valores primero.");
+            }
         }
 
         private void dtvDocumentos_CellClick(object sender, DataGridViewCellEventArgs e)
