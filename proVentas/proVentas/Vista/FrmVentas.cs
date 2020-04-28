@@ -38,7 +38,7 @@ namespace proVentas.Vista
                 var tipoDocumento = bd.tb_documento.ToList();
                 cmbTipDoc.DataSource = tipoDocumento;
                 cmbTipDoc.DisplayMember = "nombreDocumento";
-                cmbTipDoc.ValueMember = "nombreDocumento";
+                cmbTipDoc.ValueMember = "iDDocumento";
             }
         }
 
@@ -48,9 +48,12 @@ namespace proVentas.Vista
             {
                 var tbVentas = db.tb_venta;
 
+                txtNumVenta.Text = "1";
                 foreach (var iterarDatosVentas in tbVentas)
                 {
-                    txtNumVenta.Text = iterarDatosVentas.idVenta.ToString();
+                    int IdVenta = iterarDatosVentas.idVenta;
+                    int suma = IdVenta + 1;
+                    txtNumVenta.Text = suma.ToString();
                     //dtvUsuarios.Rows.Add(iterarDatosUsuarios.id, iterarDatosUsuarios.email, iterarDatosUsuarios.contrasenia);
                 }
             }
@@ -64,17 +67,27 @@ namespace proVentas.Vista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dtvProductos.Rows.Add(txtCodProd.Text, txtNombrePrd.Text, txtPrecioProd.Text, txtCantidad.Text, txtTotal.Text);
+            
 
             try
             {
                 Calculo();
-                CalculoGeneral();
-
             }
             catch(Exception ex)
             {
 
+            }
+
+            dtvProductos.Rows.Add(txtCodProd.Text, txtNombrePrd.Text, txtPrecioProd.Text, txtCantidad.Text, txtTotal.Text);
+
+            Double Suma = 0;
+            for (int i = 0; i < dtvProductos.RowCount; i++)
+            {
+                String DatosAOperar = dtvProductos.Rows[i].Cells[4].Value.ToString();
+                Double DatosCovertidos = Convert.ToDouble(DatosAOperar);
+
+                Suma += DatosCovertidos;
+                txtTotalGeneral.Text = Suma.ToString();
             }
         }
 
@@ -105,17 +118,50 @@ namespace proVentas.Vista
             }
         }
 
-        //Metodo que devuelve el Total General:
-        void CalculoGeneral()
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Double total=0;
-
-            foreach(DataGridViewRow suma in dtvProductos.Rows)
+            using(sistemaVentasEntities bd = new sistemaVentasEntities())
             {
-                total += Convert.ToDouble(suma.Cells["total"].Value);  
-            }
+                tb_venta venta = new tb_venta();
 
-            txtTotalGeneral.Text = Convert.ToString(total);
+                String comboDoc = cmbTipDoc.SelectedValue.ToString();
+                String comboCli = cmbCliente.SelectedValue.ToString();
+
+                venta.idDocumento = Convert.ToInt32(comboDoc);
+                venta.iDCliente = Convert.ToInt32(comboCli);
+                venta.iDUsuario = 8;
+                venta.totalVenta = Convert.ToDecimal(txtTotalGeneral.Text);
+                venta.fecha = Convert.ToDateTime(dtpFecha.Text);
+
+                bd.tb_venta.Add(venta);
+                bd.SaveChanges();
+
+                detalleVenta dventa = new detalleVenta();
+
+                for (int i = 0; i < dtvProductos.RowCount; i++)
+                {
+                    String idProducto = dtvProductos.Rows[i].Cells[0].Value.ToString();
+                    int idProdConvertido = Convert.ToInt32(idProducto);
+
+                    String Cantidad = dtvProductos.Rows[i].Cells[3].Value.ToString();
+                    int cantidadConver = Convert.ToInt32(Cantidad);
+
+                    String Precio = dtvProductos.Rows[i].Cells[2].Value.ToString();
+                    Decimal precioConver = Convert.ToDecimal(Precio);
+
+                    String Total = dtvProductos.Rows[i].Cells[4].Value.ToString();
+                    Decimal totalConver = Convert.ToDecimal(Total);
+
+                    dventa.idVenta = Convert.ToInt32(txtNumVenta.Text);
+                    dventa.idProducto = idProdConvertido;
+                    dventa.cantidad = cantidadConver;
+                    dventa.precio = precioConver;
+                    dventa.total = totalConver;
+
+                    bd.detalleVenta.Add(dventa);
+                    bd.SaveChanges();
+                }
+            }
         }
     }
 }

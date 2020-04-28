@@ -13,8 +13,8 @@
           <Property Name="idVenta" Type="int" Nullable="false" />
           <Property Name="idProducto" Type="int" Nullable="false" />
           <Property Name="cantidad" Type="int" />
-          <Property Name="precio" Type="decimal" Precision="12" Scale="5" />
-          <Property Name="total" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="precio" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="total" Type="decimal" Precision="18" Scale="5" />
         </EntityType>
         <EntityType Name="producto">
           <Key>
@@ -67,7 +67,7 @@
           <Property Name="idDocumento" Type="int" Nullable="false" />
           <Property Name="iDCliente" Type="int" Nullable="false" />
           <Property Name="iDUsuario" Type="int" Nullable="false" />
-          <Property Name="totalVenta" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="totalVenta" Type="decimal" Precision="18" Scale="5" />
           <Property Name="fecha" Type="date" />
         </EntityType>
         <EntityType Name="usuarios">
@@ -261,8 +261,8 @@
           <Property Name="idVenta" Type="Int32" Nullable="false" />
           <Property Name="idProducto" Type="Int32" Nullable="false" />
           <Property Name="cantidad" Type="Int32" />
-          <Property Name="precio" Type="Decimal" Precision="12" Scale="5" />
-          <Property Name="total" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="precio" Type="Decimal" Precision="18" Scale="5" />
+          <Property Name="total" Type="Decimal" Precision="18" Scale="5" />
           <NavigationProperty Name="producto" Relationship="sistemaVentasModel.FK__detalleVe__idPro__5812160E" FromRole="detalleVenta" ToRole="producto" />
           <NavigationProperty Name="tb_venta" Relationship="sistemaVentasModel.FK__detalleVe__idVen__571DF1D5" FromRole="detalleVenta" ToRole="tb_venta" />
         </EntityType>
@@ -312,7 +312,7 @@
           <Property Name="idDocumento" Type="Int32" Nullable="false" />
           <Property Name="iDCliente" Type="Int32" Nullable="false" />
           <Property Name="iDUsuario" Type="Int32" Nullable="false" />
-          <Property Name="totalVenta" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="totalVenta" Type="Decimal" Precision="18" Scale="5" />
           <Property Name="fecha" Type="DateTime" Precision="0" />
           <NavigationProperty Name="detalleVenta" Relationship="sistemaVentasModel.FK__detalleVe__idVen__571DF1D5" FromRole="tb_venta" ToRole="detalleVenta" />
           <NavigationProperty Name="tb_cliente" Relationship="sistemaVentasModel.FK__tb_venta__iDClie__5165187F" FromRole="tb_venta" ToRole="tb_cliente" />

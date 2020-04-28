@@ -113,7 +113,7 @@
             // controlVentasToolStripMenuItem
             // 
             this.controlVentasToolStripMenuItem.Name = "controlVentasToolStripMenuItem";
-            this.controlVentasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.controlVentasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.controlVentasToolStripMenuItem.Text = "Control Ventas";
             this.controlVentasToolStripMenuItem.Click += new System.EventHandler(this.controlVentasToolStripMenuItem_Click);
             // 
@@ -137,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(779, 526);
+            this.ClientSize = new System.Drawing.Size(779, 586);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
