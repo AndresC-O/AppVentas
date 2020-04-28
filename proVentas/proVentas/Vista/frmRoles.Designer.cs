@@ -72,7 +72,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(131)))), ((int)(((byte)(167)))));
             this.dtVistaRoles.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtVistaRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtVistaRoles.Size = new System.Drawing.Size(606, 284);
+            this.dtVistaRoles.Size = new System.Drawing.Size(606, 390);
             this.dtVistaRoles.TabIndex = 0;
             // 
             // idRol
@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
-            this.ClientSize = new System.Drawing.Size(767, 495);
+            this.ClientSize = new System.Drawing.Size(771, 554);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtVistaRoles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

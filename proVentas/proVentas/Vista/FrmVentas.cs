@@ -67,8 +67,6 @@ namespace proVentas.Vista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
                 Calculo();
@@ -89,6 +87,8 @@ namespace proVentas.Vista
                 Suma += DatosCovertidos;
                 txtTotalGeneral.Text = Suma.ToString();
             }
+
+            
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
@@ -120,47 +120,57 @@ namespace proVentas.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using(sistemaVentasEntities bd = new sistemaVentasEntities())
+            try
             {
-                tb_venta venta = new tb_venta();
-
-                String comboDoc = cmbTipDoc.SelectedValue.ToString();
-                String comboCli = cmbCliente.SelectedValue.ToString();
-
-                venta.idDocumento = Convert.ToInt32(comboDoc);
-                venta.iDCliente = Convert.ToInt32(comboCli);
-                venta.iDUsuario = 8;
-                venta.totalVenta = Convert.ToDecimal(txtTotalGeneral.Text);
-                venta.fecha = Convert.ToDateTime(dtpFecha.Text);
-
-                bd.tb_venta.Add(venta);
-                bd.SaveChanges();
-
-                detalleVenta dventa = new detalleVenta();
-
-                for (int i = 0; i < dtvProductos.RowCount; i++)
+                using (sistemaVentasEntities bd = new sistemaVentasEntities())
                 {
-                    String idProducto = dtvProductos.Rows[i].Cells[0].Value.ToString();
-                    int idProdConvertido = Convert.ToInt32(idProducto);
+                    tb_venta venta = new tb_venta();
 
-                    String Cantidad = dtvProductos.Rows[i].Cells[3].Value.ToString();
-                    int cantidadConver = Convert.ToInt32(Cantidad);
+                    String comboDoc = cmbTipDoc.SelectedValue.ToString();
+                    String comboCli = cmbCliente.SelectedValue.ToString();
 
-                    String Precio = dtvProductos.Rows[i].Cells[2].Value.ToString();
-                    Decimal precioConver = Convert.ToDecimal(Precio);
+                    venta.idDocumento = Convert.ToInt32(comboDoc);
+                    venta.iDCliente = Convert.ToInt32(comboCli);
+                    venta.iDUsuario = 8;
+                    venta.totalVenta = Convert.ToDecimal(txtTotalGeneral.Text);
+                    venta.fecha = Convert.ToDateTime(dtpFecha.Text);
 
-                    String Total = dtvProductos.Rows[i].Cells[4].Value.ToString();
-                    Decimal totalConver = Convert.ToDecimal(Total);
-
-                    dventa.idVenta = Convert.ToInt32(txtNumVenta.Text);
-                    dventa.idProducto = idProdConvertido;
-                    dventa.cantidad = cantidadConver;
-                    dventa.precio = precioConver;
-                    dventa.total = totalConver;
-
-                    bd.detalleVenta.Add(dventa);
+                    bd.tb_venta.Add(venta);
                     bd.SaveChanges();
+
+                    detalleVenta dventa = new detalleVenta();
+
+                    for (int i = 0; i < dtvProductos.RowCount; i++)
+                    {
+                        String idProducto = dtvProductos.Rows[i].Cells[0].Value.ToString();
+                        int idProdConvertido = Convert.ToInt32(idProducto);
+
+                        String Cantidad = dtvProductos.Rows[i].Cells[3].Value.ToString();
+                        int cantidadConver = Convert.ToInt32(Cantidad);
+
+                        String Precio = dtvProductos.Rows[i].Cells[2].Value.ToString();
+                        Decimal precioConver = Convert.ToDecimal(Precio);
+
+                        String Total = dtvProductos.Rows[i].Cells[4].Value.ToString();
+                        Decimal totalConver = Convert.ToDecimal(Total);
+
+                        dventa.idVenta = Convert.ToInt32(txtNumVenta.Text);
+                        dventa.idProducto = idProdConvertido;
+                        dventa.cantidad = cantidadConver;
+                        dventa.precio = precioConver;
+                        dventa.total = totalConver;
+
+                        bd.detalleVenta.Add(dventa);
+                        bd.SaveChanges();
+                    }
+
+                    MessageBox.Show("¡Venta Realizada con éxito!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    dtvProductos.Rows.Clear();
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("ERROR: \n\n" + ex.ToString(), " ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

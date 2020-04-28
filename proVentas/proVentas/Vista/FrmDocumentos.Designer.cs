@@ -48,7 +48,7 @@
             // 
             this.lblDoc.AutoSize = true;
             this.lblDoc.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoc.Location = new System.Drawing.Point(38, 64);
+            this.lblDoc.Location = new System.Drawing.Point(55, 61);
             this.lblDoc.Name = "lblDoc";
             this.lblDoc.Size = new System.Drawing.Size(136, 24);
             this.lblDoc.TabIndex = 5;
@@ -57,7 +57,7 @@
             // txtDocumento
             // 
             this.txtDocumento.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocumento.Location = new System.Drawing.Point(42, 98);
+            this.txtDocumento.Location = new System.Drawing.Point(59, 95);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(308, 31);
             this.txtDocumento.TabIndex = 4;
@@ -67,7 +67,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEliminar.Location = new System.Drawing.Point(546, 98);
+            this.btnEliminar.Location = new System.Drawing.Point(563, 95);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(142, 57);
             this.btnEliminar.TabIndex = 23;
@@ -80,7 +80,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditar.Location = new System.Drawing.Point(398, 98);
+            this.btnEditar.Location = new System.Drawing.Point(415, 95);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(142, 57);
             this.btnEditar.TabIndex = 22;
@@ -93,7 +93,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGuardar.Location = new System.Drawing.Point(398, 35);
+            this.btnGuardar.Location = new System.Drawing.Point(415, 32);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(290, 57);
             this.btnGuardar.TabIndex = 21;
@@ -140,7 +140,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(131)))), ((int)(((byte)(167)))));
             this.dtvDocumentos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtvDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtvDocumentos.Size = new System.Drawing.Size(425, 211);
+            this.dtvDocumentos.Size = new System.Drawing.Size(425, 287);
             this.dtvDocumentos.TabIndex = 24;
             this.dtvDocumentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvDocumentos_CellClick);
             // 
@@ -163,7 +163,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnNuevo.Location = new System.Drawing.Point(398, 161);
+            this.btnNuevo.Location = new System.Drawing.Point(415, 158);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(290, 37);
             this.btnNuevo.TabIndex = 25;
@@ -176,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
-            this.ClientSize = new System.Drawing.Size(767, 495);
+            this.ClientSize = new System.Drawing.Size(771, 554);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dtvDocumentos);
             this.Controls.Add(this.btnEliminar);

@@ -109,7 +109,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEliminar.Location = new System.Drawing.Point(562, 104);
+            this.btnEliminar.Location = new System.Drawing.Point(589, 104);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(142, 57);
             this.btnEliminar.TabIndex = 20;
@@ -122,7 +122,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditar.Location = new System.Drawing.Point(414, 104);
+            this.btnEditar.Location = new System.Drawing.Point(441, 104);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(142, 57);
             this.btnEditar.TabIndex = 19;
@@ -135,7 +135,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGuardar.Location = new System.Drawing.Point(414, 41);
+            this.btnGuardar.Location = new System.Drawing.Point(441, 41);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(290, 57);
             this.btnGuardar.TabIndex = 18;
@@ -184,7 +184,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(131)))), ((int)(((byte)(167)))));
             this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtvProductos.Size = new System.Drawing.Size(743, 241);
+            this.dtvProductos.Size = new System.Drawing.Size(743, 288);
             this.dtvProductos.TabIndex = 21;
             this.dtvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvProductos_CellClick);
             // 
@@ -219,7 +219,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnNuevo.Location = new System.Drawing.Point(414, 167);
+            this.btnNuevo.Location = new System.Drawing.Point(441, 167);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(290, 37);
             this.btnNuevo.TabIndex = 26;
@@ -232,7 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
-            this.ClientSize = new System.Drawing.Size(767, 495);
+            this.ClientSize = new System.Drawing.Size(771, 554);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dtvProductos);
             this.Controls.Add(this.btnEliminar);
