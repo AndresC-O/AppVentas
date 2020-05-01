@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
@@ -57,13 +58,15 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTotalGeneral = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTotalGeneral = new System.Windows.Forms.Label();
+            this.lblHoraActual = new System.Windows.Forms.Label();
+            this.tmHoraActual = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,18 +340,6 @@
             this.total.Name = "total";
             this.total.ReadOnly = true;
             // 
-            // txtTotalGeneral
-            // 
-            this.txtTotalGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
-            this.txtTotalGeneral.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTotalGeneral.Enabled = false;
-            this.txtTotalGeneral.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalGeneral.Location = new System.Drawing.Point(403, 497);
-            this.txtTotalGeneral.Name = "txtTotalGeneral";
-            this.txtTotalGeneral.Size = new System.Drawing.Size(115, 30);
-            this.txtTotalGeneral.TabIndex = 22;
-            this.txtTotalGeneral.Text = "0.00";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -392,7 +383,7 @@
             // 
             this.dtpFecha.CustomFormat = "yyyy-MM-dd";
             this.dtpFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(201, 12);
+            this.dtpFecha.Location = new System.Drawing.Point(166, 12);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(382, 31);
             this.dtpFecha.TabIndex = 26;
@@ -405,18 +396,45 @@
             this.panel3.Size = new System.Drawing.Size(725, 3);
             this.panel3.TabIndex = 24;
             // 
+            // lblTotalGeneral
+            // 
+            this.lblTotalGeneral.AutoSize = true;
+            this.lblTotalGeneral.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalGeneral.Location = new System.Drawing.Point(395, 497);
+            this.lblTotalGeneral.Name = "lblTotalGeneral";
+            this.lblTotalGeneral.Size = new System.Drawing.Size(58, 28);
+            this.lblTotalGeneral.TabIndex = 27;
+            this.lblTotalGeneral.Text = "0.00";
+            // 
+            // lblHoraActual
+            // 
+            this.lblHoraActual.AutoSize = true;
+            this.lblHoraActual.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraActual.ForeColor = System.Drawing.Color.Black;
+            this.lblHoraActual.Location = new System.Drawing.Point(591, 7);
+            this.lblHoraActual.Name = "lblHoraActual";
+            this.lblHoraActual.Size = new System.Drawing.Size(97, 36);
+            this.lblHoraActual.TabIndex = 28;
+            this.lblHoraActual.Text = "HORA";
+            // 
+            // tmHoraActual
+            // 
+            this.tmHoraActual.Enabled = true;
+            this.tmHoraActual.Tick += new System.EventHandler(this.tmHoraActual_Tick);
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
             this.ClientSize = new System.Drawing.Size(771, 554);
+            this.Controls.Add(this.lblHoraActual);
+            this.Controls.Add(this.lblTotalGeneral);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtTotalGeneral);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtvProductos);
             this.Controls.Add(this.btnAgregar);
@@ -474,7 +492,6 @@
         public System.Windows.Forms.TextBox txtPrecioProd;
         public System.Windows.Forms.TextBox txtCantidad;
         public System.Windows.Forms.TextBox txtTotal;
-        public System.Windows.Forms.TextBox txtTotalGeneral;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -486,5 +503,8 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblTotalGeneral;
+        private System.Windows.Forms.Label lblHoraActual;
+        private System.Windows.Forms.Timer tmHoraActual;
     }
 }

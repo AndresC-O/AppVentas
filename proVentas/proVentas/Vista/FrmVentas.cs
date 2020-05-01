@@ -59,6 +59,15 @@ namespace proVentas.Vista
             }
         }
 
+        void LimpiarBoxs()
+        {
+            txtCodProd.Text = null;
+            txtNombrePrd.Text = null;
+            txtPrecioProd.Text = null;
+            txtCantidad.Select();
+            txtTotal.Text = null;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             FrmBusqueda browse = new FrmBusqueda();
@@ -67,28 +76,34 @@ namespace proVentas.Vista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtCodProd.Equals("") || txtNombrePrd.Equals("") || txtPrecioProd.Equals("") || txtTotal.Equals("") || txtCantidad.Equals("") || txtCantidad.Text == "1" || txtCantidad.Text == null)
             {
-                Calculo();
+                MessageBox.Show("Todos los campos son obligatorios.", "Completar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch(Exception ex)
+            else
             {
+                try
+                {
+                    Calculo();
+                }
+                catch (Exception ex)
+                {
 
+                }
+
+                dtvProductos.Rows.Add(txtCodProd.Text, txtNombrePrd.Text, txtPrecioProd.Text, txtCantidad.Text, txtTotal.Text);
+
+                Double Suma = 0;
+                for (int i = 0; i < dtvProductos.RowCount; i++)
+                {
+                    String DatosAOperar = dtvProductos.Rows[i].Cells[4].Value.ToString();
+                    Double DatosCovertidos = Convert.ToDouble(DatosAOperar);
+
+                    Suma += DatosCovertidos;
+                    //txtTotalGeneral.Text = Suma.ToString();
+                    lblTotalGeneral.Text = Suma.ToString();
+                }
             }
-
-            dtvProductos.Rows.Add(txtCodProd.Text, txtNombrePrd.Text, txtPrecioProd.Text, txtCantidad.Text, txtTotal.Text);
-
-            Double Suma = 0;
-            for (int i = 0; i < dtvProductos.RowCount; i++)
-            {
-                String DatosAOperar = dtvProductos.Rows[i].Cells[4].Value.ToString();
-                Double DatosCovertidos = Convert.ToDouble(DatosAOperar);
-
-                Suma += DatosCovertidos;
-                txtTotalGeneral.Text = Suma.ToString();
-            }
-
-            
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
@@ -98,29 +113,40 @@ namespace proVentas.Vista
 
         void Calculo()
         {
-            try
-            {
-                Double precioProd;
-                Double cantidad;
-                Double total;
 
-                precioProd = Double.Parse(txtPrecioProd.Text);
-                cantidad = Double.Parse(txtCantidad.Text);
-
-                total = (precioProd * cantidad);
-                txtTotal.Text = total.ToString();
-            }
-            catch (Exception ex)
+            if(txtCantidad.Text == "0")
             {
-                txtCantidad.Text = "0";
                 MessageBox.Show("No puedes ingresar cantidades menores a 0");
                 txtCantidad.Select();
+            }
+            else
+            {
+                try
+                {
+                    Double precioProd;
+                    Double cantidad;
+                    Double total;
+
+                    precioProd = Double.Parse(txtPrecioProd.Text);
+                    cantidad = Double.Parse(txtCantidad.Text);
+
+                    total = (precioProd * cantidad);
+                    txtTotal.Text = total.ToString();
+                }
+                catch (Exception ex)
+                {
+                    txtCantidad.Text = "0";
+                }
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if(dtvProductos.Rows.Count == 0)
+            {
+                MessageBox.Show("¡No ha ingresado ningun producto!", "Completar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
             {
                 using (sistemaVentasEntities bd = new sistemaVentasEntities())
                 {
@@ -132,7 +158,7 @@ namespace proVentas.Vista
                     venta.idDocumento = Convert.ToInt32(comboDoc);
                     venta.iDCliente = Convert.ToInt32(comboCli);
                     venta.iDUsuario = 8;
-                    venta.totalVenta = Convert.ToDecimal(txtTotalGeneral.Text);
+                    venta.totalVenta = Convert.ToDecimal(lblTotalGeneral.Text);
                     venta.fecha = Convert.ToDateTime(dtpFecha.Text);
 
                     bd.tb_venta.Add(venta);
@@ -166,12 +192,19 @@ namespace proVentas.Vista
 
                     MessageBox.Show("¡Venta Realizada con éxito!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     dtvProductos.Rows.Clear();
+
+                    if (dtvProductos.Rows.Count == 0)
+                    {
+                        lblTotalGeneral.Text = "0.00";
+                        LimpiarBoxs();
+                    }
                 }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("ERROR: \n\n" + ex.ToString(), " ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        }
+
+        private void tmHoraActual_Tick(object sender, EventArgs e)
+        {
+            lblHoraActual.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
