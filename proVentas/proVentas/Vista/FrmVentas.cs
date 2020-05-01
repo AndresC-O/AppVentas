@@ -113,7 +113,6 @@ namespace proVentas.Vista
 
         void Calculo()
         {
-
             if(txtCantidad.Text == "0")
             {
                 MessageBox.Show("No puedes ingresar cantidades menores a 0");
