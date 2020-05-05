@@ -50,7 +50,11 @@ namespace proVentas.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtDocumento.Equals(""))
+            if (txtDocumento.Text.Equals(""))
+            {
+                MessageBox.Show("Introduzca Valores primero.");
+            }
+            else
             {
                 using (sistemaVentasEntities db = new sistemaVentasEntities())
                 {
@@ -63,10 +67,6 @@ namespace proVentas.Vista
                 dtvDocumentos.Rows.Clear();
                 CargarDatos();
                 LimpiarDatos();
-            }
-            else
-            {
-                MessageBox.Show("Introduzca Valores primero.");
             }
         }
 

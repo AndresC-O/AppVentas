@@ -54,6 +54,10 @@ namespace proVentas.Vista
         {
             if (txtProducto.Equals("") || txtPrecio.Equals("") || txtEstado.Equals(""))
             {
+                MessageBox.Show("Introduzca Valores primero.");
+            }
+            else
+            {
                 using (sistemaVentasEntities db = new sistemaVentasEntities())
                 {
                     prod.nombreProducto = txtProducto.Text;
@@ -67,10 +71,6 @@ namespace proVentas.Vista
                 dtvProductos.Rows.Clear();
                 CargarDatos();
                 LimpiarDatos();
-            }
-            else
-            {
-                MessageBox.Show("Introduzca Valores primero.");
             }
         }
 

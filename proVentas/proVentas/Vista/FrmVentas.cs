@@ -193,11 +193,10 @@ namespace proVentas.Vista
                     MessageBox.Show("¡Venta Realizada con éxito!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     dtvProductos.Rows.Clear();
 
-                    //if (dtvProductos.Rows.Count == 0)
-                    //{
-                    //    lblTotalGeneral.Text = "0.00";
-                    //    LimpiarBoxs();
-                    //}
+                    if (dtvProductos.Rows.Count == 0)
+                    {
+                        lblTotalGeneral.Text = "0.00";
+                    }
                 }
 
                 RetornoId();

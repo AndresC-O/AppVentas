@@ -55,6 +55,10 @@ namespace proVentas.Vista
         {
             if (txtCliente.Equals("") || txtDireccion.Equals("") || txtDui.Equals(""))
             {
+                MessageBox.Show("Introduzca Valores primero.");
+            }
+            else
+            {
                 using (sistemaVentasEntities db = new sistemaVentasEntities())
                 {
                     cliente.nombreCliente = txtCliente.Text;
@@ -68,10 +72,6 @@ namespace proVentas.Vista
                 dtvClientes.Rows.Clear();
                 CargarDatos();
                 LimpiarDatos();
-            }
-            else
-            {
-                MessageBox.Show("Introduzca Valores primero.");
             }
 
         }

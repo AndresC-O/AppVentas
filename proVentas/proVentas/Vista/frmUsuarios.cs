@@ -52,6 +52,10 @@ namespace proVentas.Vista
         {
             if(txtUsuario.Equals("") || txtContrasenia.Equals(""))
             {
+                MessageBox.Show("Introduzca Valores primero.");
+            }
+            else
+            { 
                 using (sistemaVentasEntities db = new sistemaVentasEntities())
                 {
                     user.email = txtUsuario.Text;
@@ -64,10 +68,6 @@ namespace proVentas.Vista
                 dtvUsuarios.Rows.Clear();
                 CargarDatos();
                 LimpiarDatos();
-            }
-            else
-            {
-                MessageBox.Show("Introduzca Valores primero.");
             }
 
         }
