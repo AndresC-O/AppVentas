@@ -146,6 +146,7 @@
             this.txtBuscProducto.Name = "txtBuscProducto";
             this.txtBuscProducto.Size = new System.Drawing.Size(350, 27);
             this.txtBuscProducto.TabIndex = 7;
+            this.txtBuscProducto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscProducto_KeyUp);
             // 
             // btnBuscar
             // 
@@ -226,6 +227,7 @@
             this.txtCantidad.TabIndex = 16;
             this.txtCantidad.Text = "1";
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyUp);
             // 
             // label8
             // 

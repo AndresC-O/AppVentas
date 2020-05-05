@@ -59,14 +59,14 @@ namespace proVentas.Vista
             }
         }
 
-        void LimpiarBoxs()
-        {
-            txtCodProd.Text = null;
-            txtNombrePrd.Text = null;
-            txtPrecioProd.Text = null;
-            txtCantidad.Select();
-            txtTotal.Text = null;
-        }
+        //void LimpiarBoxs()
+        //{
+        //    txtCodProd.Text = null;
+        //    txtNombrePrd.Text = null;
+        //    txtPrecioProd.Text = null;
+        //    txtCantidad.Select();
+        //    txtTotal.Text = null;
+        //}
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -134,7 +134,8 @@ namespace proVentas.Vista
                 }
                 catch (Exception ex)
                 {
-                    txtCantidad.Text = "0";
+                    txtCantidad.Text = "1";
+                    txtCantidad.Select();
                 }
             }
         }
@@ -192,18 +193,71 @@ namespace proVentas.Vista
                     MessageBox.Show("¡Venta Realizada con éxito!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     dtvProductos.Rows.Clear();
 
-                    if (dtvProductos.Rows.Count == 0)
-                    {
-                        lblTotalGeneral.Text = "0.00";
-                        LimpiarBoxs();
-                    }
+                    //if (dtvProductos.Rows.Count == 0)
+                    //{
+                    //    lblTotalGeneral.Text = "0.00";
+                    //    LimpiarBoxs();
+                    //}
                 }
+
+                RetornoId();
             }
         }
 
         private void tmHoraActual_Tick(object sender, EventArgs e)
         {
             lblHoraActual.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void txtBuscProducto_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (txtBuscProducto.Text == "")
+            {
+                if(e.KeyCode == Keys.Enter)
+                {
+                    btnBuscar.PerformClick();
+                }
+            }
+            else if (e.KeyCode == Keys.Enter)
+            {
+                using(sistemaVentasEntities bd = new sistemaVentasEntities())
+                {
+                    producto pr = new producto();
+
+                    int Buscar = int.Parse(txtBuscProducto.Text);
+                    pr = bd.producto.Where(idBuscar => idBuscar.idProducto == Buscar).First();
+
+                    txtCodProd.Text = Convert.ToString(pr.idProducto);
+                    txtNombrePrd.Text = Convert.ToString(pr.nombreProducto);
+                    txtPrecioProd.Text = Convert.ToString(pr.precioProducto);
+                    txtCantidad.Focus();
+                    txtBuscProducto.Text = "";
+                }
+            }
+        }
+
+        int intentos = 1;
+
+        private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (intentos == 2)
+                {
+                    btnAgregar.PerformClick();
+
+                    txtCodProd.Text = "";
+                    txtNombrePrd.Text = "";
+                    txtPrecioProd.Text = "";
+                    txtTotal.Text = "";
+
+                    intentos = 0;
+                    txtCantidad.Text = "1";
+                    txtBuscProducto.Focus();
+                }
+
+                intentos += 1;
+            }
         }
     }
 }
