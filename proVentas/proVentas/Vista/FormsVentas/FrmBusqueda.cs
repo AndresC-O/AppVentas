@@ -75,6 +75,7 @@ namespace proVentas.Vista.FormsVentas
             if(e.KeyCode == Keys.Enter)
             {
                 Envio();
+                this.Close();
             }
         }
     }

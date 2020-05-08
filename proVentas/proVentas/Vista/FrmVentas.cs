@@ -100,7 +100,6 @@ namespace proVentas.Vista
                     Double DatosCovertidos = Convert.ToDouble(DatosAOperar);
 
                     Suma += DatosCovertidos;
-                    //txtTotalGeneral.Text = Suma.ToString();
                     lblTotalGeneral.Text = Suma.ToString();
                 }
             }

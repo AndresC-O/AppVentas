@@ -51,7 +51,12 @@ namespace proVentas.Vista
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            DialogResult result = MessageBox.Show("¿Estas seguro que deseas salir?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if(result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
         public static FrmVentas ventas = new FrmVentas();

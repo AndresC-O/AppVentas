@@ -45,13 +45,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
+            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cONTROLToolStripMenuItem,
             this.vENTASToolStripMenuItem,
             this.mASOPCIONESToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(779, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(779, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,41 +66,46 @@
             this.productosToolStripMenuItem,
             this.documentosToolStripMenuItem});
             this.cONTROLToolStripMenuItem.Name = "cONTROLToolStripMenuItem";
-            this.cONTROLToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.cONTROLToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
             this.cONTROLToolStripMenuItem.Text = "CONTROL";
             // 
             // usuariosToolStripMenuItem
             // 
+            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // rolesToolStripMenuItem
             // 
+            this.rolesToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
+            this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
+            this.productosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // documentosToolStripMenuItem
             // 
+            this.documentosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.documentosToolStripMenuItem.Name = "documentosToolStripMenuItem";
-            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.documentosToolStripMenuItem.Text = "Documentos";
             this.documentosToolStripMenuItem.Click += new System.EventHandler(this.documentosToolStripMenuItem_Click);
             // 
@@ -107,13 +114,14 @@
             this.vENTASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.controlVentasToolStripMenuItem});
             this.vENTASToolStripMenuItem.Name = "vENTASToolStripMenuItem";
-            this.vENTASToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.vENTASToolStripMenuItem.Size = new System.Drawing.Size(75, 22);
             this.vENTASToolStripMenuItem.Text = "VENTAS";
             // 
             // controlVentasToolStripMenuItem
             // 
+            this.controlVentasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlVentasToolStripMenuItem.Name = "controlVentasToolStripMenuItem";
-            this.controlVentasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.controlVentasToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
             this.controlVentasToolStripMenuItem.Text = "Control Ventas";
             this.controlVentasToolStripMenuItem.Click += new System.EventHandler(this.controlVentasToolStripMenuItem_Click);
             // 
@@ -122,13 +130,14 @@
             this.mASOPCIONESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.mASOPCIONESToolStripMenuItem.Name = "mASOPCIONESToolStripMenuItem";
-            this.mASOPCIONESToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.mASOPCIONESToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.mASOPCIONESToolStripMenuItem.Text = "MAS OPCIONES";
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 

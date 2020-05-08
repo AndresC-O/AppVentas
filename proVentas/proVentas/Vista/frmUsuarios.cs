@@ -50,7 +50,7 @@ namespace proVentas.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(txtUsuario.Equals("") || txtContrasenia.Equals(""))
+            if(txtUsuario.Text.Equals("") || txtContrasenia.Text.Equals(""))
             {
                 MessageBox.Show("Introduzca Valores primero.");
             }

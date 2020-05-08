@@ -40,12 +40,12 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dtvClientes = new System.Windows.Forms.DataGridView();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dui = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,30 +171,6 @@
             this.dtvClientes.TabIndex = 16;
             this.dtvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvClientes_CellClick);
             // 
-            // idCliente
-            // 
-            this.idCliente.HeaderText = "ID";
-            this.idCliente.Name = "idCliente";
-            this.idCliente.ReadOnly = true;
-            // 
-            // nombreCliente
-            // 
-            this.nombreCliente.HeaderText = "Nombre Cliente";
-            this.nombreCliente.Name = "nombreCliente";
-            this.nombreCliente.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Direccion";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            // 
-            // dui
-            // 
-            this.dui.HeaderText = "DUI";
-            this.dui.Name = "dui";
-            this.dui.ReadOnly = true;
-            // 
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,6 +191,34 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // idCliente
+            // 
+            this.idCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idCliente.HeaderText = "ID";
+            this.idCliente.Name = "idCliente";
+            this.idCliente.ReadOnly = true;
+            this.idCliente.Width = 52;
+            // 
+            // nombreCliente
+            // 
+            this.nombreCliente.HeaderText = "Nombre Cliente";
+            this.nombreCliente.Name = "nombreCliente";
+            this.nombreCliente.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Direccion";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // dui
+            // 
+            this.dui.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dui.HeaderText = "DUI";
+            this.dui.Name = "dui";
+            this.dui.ReadOnly = true;
+            this.dui.Width = 64;
             // 
             // FrmClientes
             // 
@@ -257,10 +261,10 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dtvClientes;
         private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dui;
-        private System.Windows.Forms.Button btnNuevo;
     }
 }
