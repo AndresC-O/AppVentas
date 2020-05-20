@@ -230,6 +230,7 @@ namespace proVentas.Vista
                     txtPrecioProd.Text = Convert.ToString(pr.precioProducto);
                     txtCantidad.Focus();
                     txtBuscProducto.Text = "";
+                    intentos = 2;
                 }
             }
         }
@@ -256,6 +257,11 @@ namespace proVentas.Vista
 
                 intentos += 1;
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

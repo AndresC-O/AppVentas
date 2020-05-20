@@ -219,6 +219,7 @@
       <DependentUpon>sistemaVentas.edmx</DependentUpon>
       <LastGenOutput>sistemaVentas.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\shapes-and-symbols.png" />
     <None Include="Resources\money.png" />
   </ItemGroup>
   <ItemGroup>

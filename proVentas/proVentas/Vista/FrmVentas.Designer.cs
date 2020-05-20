@@ -67,6 +67,7 @@
             this.lblTotalGeneral = new System.Windows.Forms.Label();
             this.lblHoraActual = new System.Windows.Forms.Label();
             this.tmHoraActual = new System.Windows.Forms.Timer(this.components);
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -385,7 +386,7 @@
             // 
             this.dtpFecha.CustomFormat = "yyyy-MM-dd";
             this.dtpFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(166, 12);
+            this.dtpFecha.Location = new System.Drawing.Point(20, 12);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(382, 31);
             this.dtpFecha.TabIndex = 26;
@@ -413,7 +414,7 @@
             this.lblHoraActual.AutoSize = true;
             this.lblHoraActual.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoraActual.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraActual.Location = new System.Drawing.Point(591, 7);
+            this.lblHoraActual.Location = new System.Drawing.Point(445, 7);
             this.lblHoraActual.Name = "lblHoraActual";
             this.lblHoraActual.Size = new System.Drawing.Size(97, 36);
             this.lblHoraActual.TabIndex = 28;
@@ -424,12 +425,26 @@
             this.tmHoraActual.Enabled = true;
             this.tmHoraActual.Tick += new System.EventHandler(this.tmHoraActual_Tick);
             // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::proVentas.Properties.Resources.shapes_and_symbols;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(701, 7);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(46, 41);
+            this.btnClose.TabIndex = 29;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(146)))), ((int)(((byte)(179)))));
             this.ClientSize = new System.Drawing.Size(771, 554);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblHoraActual);
             this.Controls.Add(this.lblTotalGeneral);
             this.Controls.Add(this.panel3);
@@ -508,5 +523,6 @@
         private System.Windows.Forms.Label lblTotalGeneral;
         private System.Windows.Forms.Label lblHoraActual;
         private System.Windows.Forms.Timer tmHoraActual;
+        private System.Windows.Forms.Button btnClose;
     }
 }
