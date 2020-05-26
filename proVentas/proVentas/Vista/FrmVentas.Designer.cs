@@ -308,6 +308,7 @@
             this.dtvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvProductos.Size = new System.Drawing.Size(734, 150);
             this.dtvProductos.TabIndex = 20;
+            this.dtvProductos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dtvProductos_RowsRemoved);
             // 
             // CodProd
             // 

@@ -93,15 +93,14 @@ namespace proVentas.Vista
 
                 dtvProductos.Rows.Add(txtCodProd.Text, txtNombrePrd.Text, txtPrecioProd.Text, txtCantidad.Text, txtTotal.Text);
 
-                Double Suma = 0;
-                for (int i = 0; i < dtvProductos.RowCount; i++)
-                {
-                    String DatosAOperar = dtvProductos.Rows[i].Cells[4].Value.ToString();
-                    Double DatosCovertidos = Convert.ToDouble(DatosAOperar);
+                CalcularTotalFinal();
 
-                    Suma += DatosCovertidos;
-                    lblTotalGeneral.Text = Suma.ToString();
-                }
+                //dtvProductos.Refresh();
+                dtvProductos.ClearSelection();
+
+                int ultimaFila = dtvProductos.Rows.Count - 1;
+                dtvProductos.FirstDisplayedScrollingRowIndex = ultimaFila;
+                dtvProductos.Rows[ultimaFila].Selected = true;
             }
         }
 
@@ -136,6 +135,19 @@ namespace proVentas.Vista
                     txtCantidad.Text = "1";
                     txtCantidad.Select();
                 }
+            }
+        }
+
+        void CalcularTotalFinal()
+        {
+            Double Suma = 0;
+            for (int i = 0; i < dtvProductos.RowCount; i++)
+            {
+                String DatosAOperar = dtvProductos.Rows[i].Cells[4].Value.ToString();
+                Double DatosCovertidos = Convert.ToDouble(DatosAOperar);
+
+                Suma += DatosCovertidos;
+                lblTotalGeneral.Text = Suma.ToString();
             }
         }
 
@@ -262,6 +274,11 @@ namespace proVentas.Vista
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void dtvProductos_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            CalcularTotalFinal();
         }
     }
 }
