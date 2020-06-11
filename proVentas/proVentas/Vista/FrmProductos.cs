@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using proVentas.ConsultasRpt;
 using proVentas.Model;
 
 namespace proVentas.Vista
@@ -135,6 +136,12 @@ namespace proVentas.Vista
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
             btnGuardar.Enabled = true;
+        }
+
+        private void btnInforme_Click(object sender, EventArgs e)
+        {
+            FrmRptProductos report = new FrmRptProductos();
+            report.Show();
         }
     }
 }

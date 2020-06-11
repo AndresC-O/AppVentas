@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using proVentas.Vista;
 using proVentas.Vista.FormsVentas;
+using proVentas.Reports;
+using proVentas.ConsultasRpt;
 
 namespace proVentas
 {
